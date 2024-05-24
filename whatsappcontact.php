@@ -49,7 +49,7 @@ class WhatsAppContact extends Module
             $output .= $this->displayConfirmation($this->l('Message and number updated correctly.'));
         }
 
-        // Form per inserire un nuovo messaggio e numero
+        // Form insert number e message
         $output .= '
         <form action="' . $_SERVER['REQUEST_URI'] . '" method="post">
             <fieldset>
@@ -58,11 +58,11 @@ class WhatsAppContact extends Module
                 <div class="margin-form">
                     <input type="text" name="whatsapp_new_message" value="' . Configuration::get('WHATSAPP_TOOLTIP_MESSAGE') . '" />
                 </div>
-                <label>' . $this->l('Nuovo Numero') . '</label>
+                <label>' . $this->l('New number') . '</label>
                 <div class="margin-form">
                     <input type="text" name="whatsapp_new_number" value="' . Configuration::get('WHATSAPP_PHONE_NUMBER') . '" />
                 </div>
-                <input type="submit" name="submitNewData" value="' . $this->l('Salva') . '" class="button" />
+                <input type="submit" name="submitNewData" value="' . $this->l('Save') . '" class="button" />
             </fieldset>
         </form>';
 
